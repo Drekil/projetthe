@@ -1,17 +1,13 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace App\Controller;
 
-use App\Entity\Users;
-use App\Form\RegistrationFormType;
 use App\Repository\UsersRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/admin/utilisateurs', name: 'admin_users_')]
+#[Route('/utilisateurs', name: 'users_')]
 class UsersController extends AbstractController
 {
     #[Route('/', name: 'index')]
@@ -20,6 +16,4 @@ class UsersController extends AbstractController
         $users = $usersRepository->findBy([], ['firstname' =>'asc']);
         return $this->render('admin/users/index.html.twig', compact('users'));
     }
-
-    
 }

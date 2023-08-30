@@ -22,7 +22,7 @@
                         {{ form_row(registrationForm.city) }}
                         {{ form_row(registrationForm.zipcode) }}
                     </fieldset>
-                    {{ form_row(registrationForm.plainPassword, {
+                    {{ form_row(registrationForm.password, {
                         label: 'Password'
                     }) }}
                     {{ form_row(registrationForm.RGPDConsent) }}
@@ -33,6 +33,4 @@
             </div>
         </div>
     </section>
-    <h1>Inscription</h1>
-
 {% endblock %}

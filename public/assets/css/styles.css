@@ -1,0 +1,32 @@
+body{
+    background: aliceblue;
+    justify-content: center;
+}
+
+nav:first-of-type{
+    background-color: darkseagreen;
+    width: 70%;
+    margin: auto;
+}
+
+header{
+    justify-content: center;
+    text-align: center;
+}
+
+main{
+    width: 70%;
+    background: beige ;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.main-title{
+    justify-content: center;
+}
+
+.logo-tea{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}

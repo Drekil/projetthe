@@ -18,9 +18,22 @@
         <script src='{{ asset('assets/js/scripts.js') }}' defer></script>
     </head>
     <body>
+        <header>
+            <div class="main-title">
+                <div class="logo-tea">
+                    <a href="{{path('main')}}"><img width="64" height="64" src="https://img.icons8.com/cotton/64/tea-1.png" alt="tea-1"/></a>
+                    
+                </div>
+                <div>
+                    <h1>Salu'thé</h1>
+                </div>
+            </div>
         {% include "_partials/_nav.html.twig" %}
         {% include "_partials/_flash.html.twig" %}
+        </header>
+        <main>
         {% block body %}{% endblock %}
+        </main>
 
         {% include "_partials/_footer.html.twig" %}
     </body>
