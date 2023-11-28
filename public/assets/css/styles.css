@@ -1,11 +1,11 @@
 body{
-    background: aliceblue;
+    background: #D9AD93;
     justify-content: center;
 }
 
 nav:first-of-type{
-    background-color: darkseagreen;
-    width: 70%;
+    background-color: #80db6d;
+    width: 50%;
     margin: auto;
 }
 
@@ -15,12 +15,53 @@ header{
 }
 
 main{
-    width: 70%;
-    background: beige ;
+    width: 50%;
+    background: whitesmoke;
     justify-content: center;
     margin: auto;
 }
 
+.title-home{
+    text-align: center;
+}
+
+.list-contenu{
+    margin: auto;
+    justify-content: center;
+}
+
+.list-product{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.parent-categories-title{
+    text-align: center;
+}
+
+.child-categories-title{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.categories{
+    margin-right: 3em;
+    margin-left: 3em;
+    margin-bottom: 5em;
+}
+
+.categories a{
+    transition: 1s;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
 
 .main-title{
     justify-content: center;
@@ -29,4 +70,16 @@ main{
 .logo-tea{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+}
+
+.circle{
+    border-radius: 100%;
 }

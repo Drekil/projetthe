@@ -5,27 +5,23 @@
 {% block body %}
 
     <main class="container">
-        <section class="row">
-            <div class="col-12">
+        <section class="row list-contenu">
+            <div class="col-12 parent-categories-title list-product">
                 <h1>Liste des produits de la catégorie {{ category.name }}</h1>
             </div>
-            {% for product in products.data %}
-                <div class="col-3 mb-3">
-                    <div class="card h-100">
-                    <img src="{{ asset('assets/uploads/products/mini/300x300-' ~ product.images[0].name )}}" class="card-img-top" alt="{{ product.name }}">
-                        <div class="card-body">
-                        <h2 class="card-title">{{ product.name }}</h2>
-                        <p class="card-text">{{ product.description }}</p>
-                        <a href="{{ path('products_details', {"slug": product.slug})}}" class="btn btn-primary">Voir les détails</a>
-                        </div>
+            {% for product in products %}
+                <div class="col-2 categories">
+                    <div class="">
+                        <a href="{{ path('products_details', {"slug": product.slug})}}">
+                            <img src="{{ asset('assets/uploads/products/mini/300x300-' ~ product.images[0].name )}}" class="card-img-top circle" alt="{{ product.name }}">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ product.name }}</h2>
+                                <p class="card-text">{{ product.price / 100 }}€</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             {% endfor %}
-            {% set path = 'categories_list' %}
-            {% set slug = category.slug %}
-            {% set pages = products.pages %}
-            {% set currentPage = products.page %}
-            {% include "_partials/_pagination.html.twig" %}
         </section>
     </main>
 {% endblock %}

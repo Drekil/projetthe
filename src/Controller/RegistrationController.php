@@ -8,7 +8,6 @@ use App\Repository\UsersRepository;
 use App\Security\UsersAuthenticator;
 use App\Services\SendMailService;
 use App\Services\JWTService;
-use DateTimeImmutable;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;

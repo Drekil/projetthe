@@ -10,12 +10,10 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Thés et infusions
                     </a>
-                    <ul class="dropdown-menu">
-                    {#
-                        {% for category in categories %}  
-                        <li><a class="dropdown-item" href="#"> {{ category.name }} </a></li>
-                        {% endfor %}
-                    #}
+                    <ul class="dropdown-menu"> 
+                        <li><a class="dropdown-item" href="{{ path('categories_list', {slug: "the-vert"}) }}"> Thés verts </a></li>
+                        <li><a class="dropdown-item" href="{{ path('categories_list', {slug: "the-noir"}) }}"> Thés noirs </a></li>
+                        <li><a class="dropdown-item" href="{{ path('categories_list', {slug: "infusions"}) }}"> Infusions </a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -23,10 +21,9 @@
                         Epicerie fine
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="{{ path('categories_list', {slug: "miels"}) }}"> Miels </a></li>
+                        <li><a class="dropdown-item" href="{{ path('categories_list', {slug: "confitures-et-tartinables"}) }}"> Confitures et tartinables </a></li>
+                        <li><a class="dropdown-item" href="{{ path('categories_list', {slug: "biscuits"}) }}"> Biscuits </a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -34,10 +31,8 @@
                         Accessoire
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="{{ path('categories_list', {slug: "theiere"}) }}"> Théières </a></li>
+                        <li><a class="dropdown-item" href="{{ path('categories_list', {slug: "tasses"}) }}"> Tasses </a></li>
                     </ul>
                 </li>
             </ul>
