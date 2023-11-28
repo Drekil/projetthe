@@ -1,0 +1,10 @@
+<h1>Bienvenue {{ user.firstname }} !</h1>
+
+<p>
+    Validez votre inscription en cliquant sur le lien ci-dessous
+</p>
+
+<p>
+    <a href="{{ absolute_url(path('verify_user', {token: token})) }}">Lien</a>
+    <p>Ce lien expirera dans 3 heures</p>
+</p>
