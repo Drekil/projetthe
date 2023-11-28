@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Users;
 use App\Repository\UsersRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,5 +16,10 @@ class UsersController extends AbstractController
     {
         $users = $usersRepository->findBy([], ['firstname' =>'asc']);
         return $this->render('admin/users/index.html.twig', compact('users'));
+    }
+    #[Route ('/{slug}', name: 'compte')]
+    public function compte(Users $user): Response
+    {
+        return $this->render('utilisateurs/compte.html.twig', compact('user'));
     }
 }

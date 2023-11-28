@@ -24,12 +24,12 @@
                         </div>
                         {% for product in category.products %}
                         {% if loop.revindex <= "8" %}
-                            <div class="col-2 categories">
+                            <div class="card-group col-6 col-sm-4 col-xl-3 categories">
                                 <a href="{{ path('products_details', {slug: product.slug}) }}">
-                                    <div class="">
-                                        <div class="d-flex flex-column card-body h-100">
+                                    <div class="card border-light bg-transparent">
+                                        <div class="d-flex flex-column card-body h-100 text-center">
                                             <div>
-                                                <img src="{{ asset('assets/uploads/products/mini/300x300-' ~ product.images[0].name )}}" class="card-img-top circle" alt="{{ product.name }}">
+                                                <img src="{{ asset('assets/uploads/products/mini/300x300-' ~ product.images[0].name )}}" class="card-img-top mb-3 w-100 circle" alt="{{ product.name }}">
                                             </div>
                                             <div>
                                                 <h4 class="card-title">{{ product.name }}</h4>
